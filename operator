@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>terenary</title>
+</head>
+<body>
+ <p>Enter the year</p>
+   Year <input type="text" name="n1" id ="year"><br><br/>
+   
+   <input type="button" value="Display" onClick="leapYear()"> 
+<p id ="leap"></p>
+</body>
+<script type="text/javascript">
+  
+  function leapYear(){
+	  
+  var output =" " ;
+  var year = document.getElementById("year").value;
+  //var output = String(document.leap.result.value);
+  output = (year%4==0)?"leap year":"not leap year";
+  document.getElementById("leap").innerHTML="It is "+output;
+  }
+  </script>
+</html>
