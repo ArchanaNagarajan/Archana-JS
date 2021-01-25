@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>Hello App Engine</title>
+  </head>
+  <body>
+   <form name="calculator">
+   <p>Enter the operation to be performed</p>
+   OPERATION <input type="text" name="optr" id="operation"><br>
+   <p>Enter the numbers</p>
+   Num 1 <input type="text" name="n1" id ="num1"><br><br/>
+   Num 2 <input type="text" name="n2" id ="num2"><br><br/>
+   result <input type="text" name="result" id="result"><br><br/>
+   <input type="button" value="calculate" onClick="calculation()"> 
+   </form>
+  </body>
+  <script type="text/javascript">
+  
+  function calculation(){
+	  
+  var option =" " ;
+  var num1 = Number(document.calculator.num1.value);
+  var num2 = Number(document.calculator.num2.value);
+  var operation = String(document.calculator.operation.value);
+  
+  switch(operation){
+  
+  case 'addition':
+	  option = num1+num2;
+	  document.calculator.result.value=option;
+	  break;
+  case 'subtraction':
+	  option = num1-num2;
+	  document.calculator.result.value=option;
+	  break;
+  case 'multiplication':
+	  option = num1*num2;
+	  document.calculator.result.value=option;
+	  break;
+  case 'division':
+	  option = num1/num2;
+	  document.calculator.result.value=option;
+	  break;
+  
+  }
+  
+  }
+  </script>
+</html>
